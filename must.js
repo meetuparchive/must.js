@@ -1,11 +1,11 @@
 ;(function(window, $) {
   if (window.must !== undefined) {
-      return ctx.must;
+      return window.must;
   }
   var mu = {};
   mu.Rsvps = function(callback, params, error) {
     return mu.Stream({
-      url: "http://stream.meetup.com:8100/2/rsvps",
+      path: "/2/rsvps",
       callback: callback,
       error: error,
       params: params
@@ -14,7 +14,7 @@
 
   mu.Photos = function(callback, params, error) {
     return mu.Stream({
-      url: "http://stream.meetup.com:8100/2/photos",
+      path: "/2/photos",
       callback: callback,
       error: error,
       params: params
@@ -23,7 +23,7 @@
 
   mu.Checkins = function(callback, params, error) {
     return mu.Stream({
-      url: "http://stream.meetup.com:8100/2/checkins",
+      path: "/2/checkins",
       callback: callback,
       error: error,
       params: params
@@ -32,7 +32,7 @@
 
   mu.Comments = function(callback, params, error) {
     return mu.Stream({
-      url: "http://stream.meetup.com:8100/2/event_comments",
+      path: "/2/event_comments",
       callback: callback,
       params: params,
       error: error
@@ -51,7 +51,8 @@
   mu.Stream = (function(config) {
     var $      = jQuery,
       host     = config.host  || "http://stream.meetup.com",
-      url      = config.url   || host + "/2/rsvps",
+      path     = config.path  || "/2/rsvps"
+      url      = config.url   || host + path,
       wsUrl    = config.wsUrl || url.replace(/^http/, 'ws'),
       log      = config.log   || function(msg) { },
       stopping = false,

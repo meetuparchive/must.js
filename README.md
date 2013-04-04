@@ -39,12 +39,6 @@ After loading you can start streaming meetup data
         alert(json.comment);
      });
 
-### Events
-
-    must.Events(function(json) {
-       alert(json.name);
-    });
-
 ### Photos
 
     must.Photos(function(){

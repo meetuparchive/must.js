@@ -1,15 +1,15 @@
 # must.js
 
-A browser client for the Meetup Streaming API
+Pipe community into your browser with the Meetup Streaming API
 
-## usage
+## Usage
 
 This client provides a interface for both websocket and long-polling
 protocols. You supply a callback function to respond to the json,
 and any parameters you want to be included. For example, to alert
 with the member_id for every RSVP in the event "1234":
 
-### loading
+### Loading
 
 You will want to make sure the client is loaded, once
 
@@ -23,11 +23,11 @@ Or defer is loading
         // do after deferral
      }));
 
-### streaming
+### Streaming
 
 After loading you can start streaming meetup data
 
-#### RSVPS
+#### RSVPs
 
       must.Rsvps(function(json) {
           alert(json.member.member_id);
@@ -39,13 +39,13 @@ After loading you can start streaming meetup data
         alert(json.comment);
      });
 
-### Photos
+#### Photos
 
     must.Photos(function(json){
       alert(json.highres_link);
     });
 
-### Checkins
+#### Checkins
 
     must.Checkins(function(json) {
       alert(json.member.member_name);
@@ -53,7 +53,7 @@ After loading you can start streaming meetup data
       event_id: 1234
     });
 
-### stoping stream
+### Stopping stream
 
 If you ever wish to stop the cycle of callbacks, call `stop()`
 on the object returned by a streams creation.

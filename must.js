@@ -124,7 +124,7 @@
             }
           };
           mu.Loader.defer(function () {
-              successCallback();
+            successCallback();
           });
       }
       return {

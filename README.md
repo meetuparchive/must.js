@@ -19,7 +19,7 @@ You can either load it immediately
 
 Or defer is loading
 
-     $(window).load(mu.Loader.defer(function() {
+     $(window).load(must.Loader.defer(function() {
         // do after deferral
      }));
 
@@ -61,6 +61,11 @@ on the object returned by a streams creation.
       stream.stop();
 
 To restart the stream, create a new one with the function above.
+
+
+### Rate limitations
+
+The Meetup stream api allows up to 10 concurrent connections from the same client IP.
 
 This client requires jQuery 1.4 or higher.
 

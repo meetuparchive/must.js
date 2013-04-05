@@ -3,6 +3,8 @@
       return window.must;
   }
   var mu = {};
+
+  /** Streams public RSVP data from http://www.meetup.com/meetup_api/docs/stream/2/rsvps/#polling */
   mu.Rsvps = function(callback, params, error) {
     return mu.Stream({
       path: "/2/rsvps",
@@ -12,6 +14,7 @@
     });
   };
 
+  /** Streams public photo data from http://www.meetup.com/meetup_api/docs/stream/2/photos/#polling */
   mu.Photos = function(callback, params, error) {
     return mu.Stream({
       path: "/2/photos",
@@ -21,6 +24,7 @@
     });
   };
 
+  /** Streams public checkin data from http://www.meetup.com/meetup_api/docs/stream/2/checkins/#polling */
   mu.Checkins = function(callback, params, error) {
     return mu.Stream({
       path: "/2/checkins",
@@ -30,6 +34,7 @@
     });
   };
 
+  /** Streams public Meetup comments from http://www.meetup.com/meetup_api/docs/stream/2/event_comments/#polling */
   mu.Comments = function(callback, params, error) {
     return mu.Stream({
       path: "/2/event_comments",
@@ -42,6 +47,7 @@
   /**
    * @param config object that defines the following options
    *  host - base host
+   *  path - path of stream endpoint
    *  url - http url for the stream
    *  wsUrl - websockets url for the stream
    *  callback - callback for messages, parameter is one JS object

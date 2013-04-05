@@ -1,0 +1,15 @@
+{
+  "name": "sassquatch",
+  "version": "1.0.0",
+  "main": [
+    "./css/sassquatch.css"
+  ],
+  "gitHead": "89ddf637a7f8f7197ca583101e2f44bea6b4bc93",
+  "_id": "sassquatch@1.0.0",
+  "readme": "ERROR: No README.md file found!",
+  "description": "ERROR: No README.md file found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/meetup/sassquatch"
+  }
+}

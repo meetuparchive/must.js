@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>must.js test</title>
+    <link rel="stylesheet" href="components/sassquatch/css/sassquatch.css"/>
+    <style>
+      body {
+        background:#eee;
+        padding:1em;
+      }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="must.js"></script>
+  </head>
+  <body>
+    <div class="doc-box rounded-all">
+      <div class="doc-content">
+        <h1>Must.js test</h1>
+      </div>
+      <div class="doc-content line">
+        <div class="unit size1of4">
+          <div>
+            <h1>RSVPs</h1>
+          </div>
+          <div>
+            <ul class="paddedList" id="rsvps"></ul>
+          </div>
+        </div>
+        <div class="unit size1of4">
+          <div>
+            <h1>Comments</h1>
+          </div>
+          <div>
+            <ul class="paddedList" id="comments"></ul>
+          </div>
+        </div>
+        <div class="unit size1of4">
+          <div>
+            <h1>Photos</h1>
+          </div>
+          <div>
+            <ul class="paddedList" id="comments"></ul>
+          </div>
+        </div>
+        <div class="lastUnit">
+          <div>
+            <h1>Checkins</h1>
+          </div>
+          <div>
+            <ul class="paddedList" id="checkins"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      (function($, must){
+        $(function() {
+           must.Rsvps(function(r){
+             $("#rsvps").append("<li>"+r.member.member_name+"</li>");
+           });
+
+          /* must.Comments(function(c) {
+              $("#comments").append("<li>"+c.comment+"</li>")
+           });*/
+
+           /*must.Photos(function(p) {
+              $("#photos").append("<li><img src='"+p.thumb_link+"/></li>")
+           });*/
+
+           /*must.Checkins(function(c) {
+              $("#checkins").append("<li>"+c.comment+"</li>")
+           });*/
+        });
+      })(jQuery, must);
+    </script>
+  </body>
+</html>

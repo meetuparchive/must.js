@@ -41,7 +41,7 @@ After loading you can start streaming meetup data
 
 ### Photos
 
-    must.Photos(function(){
+    must.Photos(function(json){
       alert(json.highres_link);
     });
 

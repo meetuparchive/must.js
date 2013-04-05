@@ -70,3 +70,4 @@ The Meetup stream api allows up to 10 concurrent connections from the same clien
 This client requires jQuery 1.4 or higher.
 
 Meetup 2013
+

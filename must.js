@@ -136,5 +136,4 @@
 
   // export to window
   window.must = mu;
-//  $(window).load(mu.Loader._load);
 }(this, jQuery));

@@ -54,5 +54,14 @@ The Meetup stream api allows up to 10 concurrent connections from the same clien
 
 This client requires jQuery 1.4 or higher.
 
+
+## Example
+
+An example is provided. Install its depdendencies with
+
+    bower install sassquatch jquery
+
+Then open index.html in your browser
+
 Meetup 2013
 

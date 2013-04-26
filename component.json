@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "must.js",
   "dependencies": {
-    "jquery": "1.7.x"
+    "jquery": "1.9.x"
   },
   "ignore": [
     "**/.*",

@@ -9,20 +9,6 @@ protocols. You supply a callback function to respond to the json,
 and any parameters you want to be included. For example, to alert
 with the member_id for every RSVP in the event "1234":
 
-### Loading
-
-You will want to make sure the client is loaded, once
-
-You can either load it immediately
-
-     $(window).load(must.Loader.load);
-
-Or defer is loading
-
-     $(window).load(must.Loader.defer(function() {
-        // do after deferral
-     }));
-
 ### Streaming
 
 After loading you can start streaming meetup data
@@ -61,7 +47,6 @@ on the object returned by a streams creation.
       stream.stop();
 
 To restart the stream, create a new one with the function above.
-
 
 ### Rate limitations
 

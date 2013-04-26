@@ -134,23 +134,6 @@
       };
   });
 
-  /** Defers tasks until page has loaded, makes progress bars less likely to spin forever */
-  mu.Loader = {
-    hasLoaded: false,
-    // defer loading
-    defer: function(task) {
-      if (mu.Loader.hasLoaded) {
-        setTimeout(task, 50);
-      } else {
-        mu.Loader.load();
-        $(window).load(task);
-      }
-    },
-    // load immediately
-    load: function() {
-      mu.Loader.hasLoaded = true;
-    }
-  };
   // export to window
   window.must = mu;
 //  $(window).load(mu.Loader._load);

@@ -60,6 +60,7 @@
       (function($, must){
         $(function() {
            var currentStream
+            , currentStreamName
             , streams = {
               "rsvps": function() {
                  return must.Rsvps(function(r){
@@ -85,12 +86,25 @@
            };
            $(".button").on('click', function(e){
               e.preventDefault();
-              $(".button").removeAttr('disabled');
-              $(this).attr('disabled','disabled');
+              var $btn = $(this),
+                  streamName = $btn.data().stream;
+
+              if (streamName == currentStreamName && $btn.attr('disabled')) {
+                $btn.removeAttr('disabled');
+              } else {
+                $(".button").removeAttr('disabled');
+                $btn.attr('disabled','disabled');
+              }
+
               if (currentStream) {
                 currentStream.stop();
               }
-              currentStream = streams[$(this).data().stream]();
+
+              if ($btn.attr('disabled')) {
+                currentStreamName = streamName;
+                currentStream = streams[streamName]();
+              }
+
               return false;
            });
         });

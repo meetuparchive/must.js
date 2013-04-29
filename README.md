@@ -2,6 +2,14 @@
 
 Pipe community into your browser with the Meetup Streaming API
 
+## Install
+
+Using [bower](http://bower.io/)
+
+    bower install must
+
+This will unpack must.js into your bowers components directory.
+
 ## Usage
 
 This client provides a interface for both websocket and long-polling

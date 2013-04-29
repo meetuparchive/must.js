@@ -8,6 +8,7 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "components"
+    "components",
+    "index.html"
   ]
 }
